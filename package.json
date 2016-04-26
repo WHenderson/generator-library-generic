@@ -1,0 +1,29 @@
+{
+  "name": "generator-library-generic",
+  "version": "1.0.0",
+  "description": "Generic library template supporting npm/bower/mocha/gulp/karma/umd/travis/codeage",
+  "main": "generators/app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WHenderson/generator-library-generic.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "npm",
+    "mocha",
+    "coffee",
+    "coffee-coverage"
+  ],
+  "author": "Will Henderson <whenderson.github@gmail.com> (https://github.com/WHenderson)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/WHenderson/generator-library-generic/issues"
+  },
+  "homepage": "https://github.com/WHenderson/generator-library-generic#readme",
+  "devDependencies": {
+    "yeoman-generator": "^0.22.6"
+  }
+}
