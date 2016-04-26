@@ -1,5 +1,6 @@
 var generators = require('yeoman-generator');
 var _ = require('lodash');
+var util = require('util');
 
 module.exports = generators.Base.extend({
     constructor: function () {
@@ -24,27 +25,7 @@ module.exports = generators.Base.extend({
         }, {
             local: require.resolve('generator-license')
         });
-    },
-    writingPackaging: function () {
-        const pkg = this.fs.readJSON(this.destinationPath('package.json'));
 
-        _.merge(pkg, {
-            'files': [
-                'dist'
-            ],
-            'scripts': {
-                'preversion': 'npm-git-library-version preversion',
-                'version': 'npm-git-library-version version',
-                'postversion': 'npm-git-library-version postversion',
-                'build': 'gulp chained-1-build',
-                'test': 'gulp',
-                'coveralls': 'coveralls --verbose < coverage/lcov.info'
-            },
-            'main': 'dist/index.js'
-        });
-
-        this.fs.writeJSON(this.destinationPath('package.json'), pkg);
-
-        this.fs.write(this.destinationPath('src/index.js'), '');
+        this.composeWith('library-generic:packaging');
     }
 });

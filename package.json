@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/WHenderson/generator-library-generic#readme",
   "devDependencies": {
+    "git-config": "0.0.7",
     "yeoman-generator": "^0.22.6"
   },
   "dependencies": {
